@@ -1,0 +1,66 @@
+:root {
+    --blue: rgb(70, 160, 239);
+}
+
+body {
+    font-family: 'trebuchet ms';
+    margin: 0;
+    background-color: aliceblue;
+}
+
+header {
+    display: flex;
+    width: 98%;
+    background-color: var(--blue);
+    padding: 5px 1% 5px;
+}
+
+header * {
+    margin-top: auto;
+    margin-bottom: auto;
+    white-space: nowrap;
+}
+
+.header-logo {
+    height: 50px;
+    margin-left: 13px;
+    margin-top: 4px;
+}
+
+.header-logo-holder {
+    display: inline-block;
+    position: absolute;
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+    background-color: rgb(199, 223, 20);
+}
+
+header h1 {
+    font-size: 3.3em;
+    margin-left: 70px; 
+    margin-top: -4px;
+}
+
+.header-menu-button {
+    margin-left: auto;
+    height: 55px;
+    fill: #000000;
+}
+
+.header-menu-content {
+    display: none;
+    position: absolute;
+    top: 53px;
+    right: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.header-menu-button:hover + .header-menu-content {
+    display: block;
+}
+
+.header-menu-content:hover{
+    display: block;
+}
