@@ -1,7 +1,8 @@
 main {
-    padding: 0.5% 1% 0.5%;
+    padding: 1px 1px 1px;
+    margin: 30px 25px 0;
     text-align: center;
-    background-color: var(--blue);
+    background-color: var(--orange);
     border-radius: 10px;
 }
 
