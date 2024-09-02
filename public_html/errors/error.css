@@ -1,7 +1,7 @@
 main {
     padding: 0 1% 0;
     text-align: center;
-    /*background-color: var(--blue);*/
+    background-color: var(--blue);
     border-radius: 10px;
 }
 
