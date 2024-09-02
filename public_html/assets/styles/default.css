@@ -1,6 +1,6 @@
 :root {
-    --blue: rgb(70, 160, 239);
-    --orange: rgb(239, 170, 70);
+    --blue: #5daaee;
+    --orange: #efaa46;
 }
 
 body {
@@ -9,11 +9,22 @@ body {
     background-color: aliceblue;
 }
 
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
 header {
     display: flex;
-    width: 98%;
+    width: 99vw;
     background-color: var(--blue);
-    padding: 5px 1% 5px;
+    padding: 5px 0.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5)
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-left: 10px;
 }
 
 header * {
@@ -22,46 +33,51 @@ header * {
     white-space: nowrap;
 }
 
+header nav {
+    display: inline-table;
+    margin-left: auto;
+}
+
+header nav a {
+    font-size: 1.3em;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.header-nav-selected {
+    background-color: var(--orange);
+}
+
+.header-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 .header-logo {
     height: 50px;
-    margin-left: 13px;
-    margin-top: 4px;
-}
-
-.header-logo-holder {
-    display: inline-block;
-    position: absolute;
-    width: 60px; 
-    height: 60px; 
+    background-color: #1a7cd2;
     border-radius: 50%;
-    background-color: rgb(199, 223, 20);
 }
 
-header h1 {
-    font-size: 3.3em;
-    margin-left: 70px; 
-    margin-top: -4px;
+.header-title-logo-holder {
+    display: flex;
 }
 
-.header-menu-button {
-    margin-left: auto;
-    height: 55px;
-    fill: #000000;
-}
+@media only screen and (max-width: 945px) {
+    header{
+        display: grid;
+    }
 
-.header-menu-content {
-    display: none;
-    position: absolute;
-    top: 53px;
-    right: 15px;
-    border-radius: 10px;
-    background-color: white;
-}
+    header nav {
+        margin-top: 10px;
+        margin-right: auto;
+    }
 
-.header-menu-button:hover + .header-menu-content {
-    display: block;
+    .header-title-logo-holder
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
-.header-menu-content:hover{
-    display: block;
-}
+  

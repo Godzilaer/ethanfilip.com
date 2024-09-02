@@ -8,22 +8,23 @@
 
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/styles/default.css">
-    <link rel="stylesheet" href="/assets/styles/games.css">
 </head>
 <body>
     <header>
-        <a href="/" class="header-logo-holder">
-            <img src="/assets/images/logo.png" class="header-logo">
-        </a>
-        <h1>The Ethan Web</h1>
+        <div class="header-title-logo-holder">
+            <a href="/">
+                <img src="/assets/images/logo_circle.png" class="header-logo">
+            </a>
+            
+            <h1>The Ethan Web</h1>
+        </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="header-menu-button"><path d="M84.65-212.91v-113.18h790.7v113.18H84.65Zm0-211.26v-113.18h790.7v113.18H84.65Zm0-211.5v-113.18h790.7v113.18H84.65Z"/> </svg>
-
-        <table class="header-menu-content">
-            <tr><td><a href="/">Home</a></td></tr>
-            <tr><td><a href="/games">Games</a></td></tr>
-            <tr><td><a>Webpages</a></td></tr>
-        </table>
+        <nav>
+            <a class="header-nav-button" href="/">Home</a>
+            <a class="header-nav-selected" href="/games">Games</a>
+            <a class="header-nav-button" href="">Webpages</a>
+            <a class="header-nav-button" href="/current-projects">Current Projects</a>
+        </nav>
     </header>
 
     <script type="text/javascript" src="/assets/scripts/games.js"></script>
