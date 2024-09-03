@@ -40,10 +40,8 @@ header nav {
 
 header nav a {
     font-size: 1.3em;
-    margin-right: 10px;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: 1px solid;
+    padding: 2px 5px;
+    border-radius: 5px;
 }
 
 .header-nav-selected {
@@ -64,7 +62,7 @@ header nav a {
     display: flex;
 }
 
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 760px) {
     header{
         display: grid;
     }
@@ -78,6 +76,10 @@ header nav a {
     {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    header nav a {
+        font-size: 1em;
     }
 }
   
