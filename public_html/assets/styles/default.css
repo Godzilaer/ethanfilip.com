@@ -41,7 +41,11 @@ header nav {
 header nav a {
     font-size: 1.3em;
     padding: 2px 5px;
-    border-radius: 5px;
+    border-right: 1.5px solid;
+}
+
+.header-nav-home {
+    border-left: 1.5px solid;
 }
 
 .header-nav-selected {
