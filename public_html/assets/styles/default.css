@@ -1,6 +1,7 @@
 :root {
     --blue: #5daaee;
     --orange: #efaa46;
+    --grey: rgba(166, 189, 213, 0.205);
 }
 
 body {
@@ -42,6 +43,15 @@ header nav a {
     font-size: 1.3em;
     padding: 2px 5px;
     border-right: 1.5px solid;
+}
+
+.welcome-container {
+    text-align: center;
+    background-color: var(--grey);
+    border-radius: 15px;
+    margin: 20px 10%;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .header-nav-home {
