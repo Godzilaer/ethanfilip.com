@@ -1,4 +1,4 @@
-const header = document.body.getElementsByTagName("header")[0];
+const header = document.body.querySelector("header");
 const headerHTML = 
 `<div class="header-title-logo-holder">
     <a href="/">
@@ -16,3 +16,12 @@ const headerHTML =
 </nav>`
 
 header.innerHTML += headerHTML;
+
+const copyrightText = document.body.querySelector("#copyright");
+
+var originalYear = 2024;
+var currentYear = new Date().getFullYear();
+var year = currentYear == originalYear ? originalYear : originalYear + "-" + currentYear;
+
+copyrightText.innerHTML = "© " + year + " Ethan Filip. All rights reserved.";
+
