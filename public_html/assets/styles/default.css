@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    margin: 1% 1%;
+    margin: 2% 1%;
 }
 
 header {
@@ -26,7 +26,8 @@ footer {
     background-color: var(--blue);
     text-align: center;
     width: 100%;
-    padding: 2px;
+    padding: 2px 0;
+    /*box-shadow: 0 50vh 0 50vh var(--blue);*/
 }
 
 nav a{

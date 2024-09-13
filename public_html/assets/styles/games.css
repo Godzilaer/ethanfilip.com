@@ -1,14 +1,21 @@
+.game-container {
+    width: 10%;
+}
+
 .game-logo {
-    height: 300px;
+    width: 100%;
+    padding: 1% 0 20% 0;
     background-color: var(--blue);
-    border-radius: 20px;
+    border-radius: 1vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    margin: 0;
-    height: auto;
+    margin-top: -5px;
 }
 
 .game-title {
-    white-space: nowrap;
+    font-size: 2.1vw;
+    width: 100%;
+    margin-top: -20%;
+    text-align: center;
     text-overflow: ellipsis;
     overflow: hidden;
     text-decoration: none; 
@@ -17,5 +24,6 @@
 
 .game-link {
     text-decoration: none;
+    
 }
 
