@@ -23,5 +23,4 @@ var originalYear = 2024;
 var currentYear = new Date().getFullYear();
 var year = currentYear == originalYear ? originalYear : originalYear + "-" + currentYear;
 
-copyrightText.innerHTML = "© " + year + " Ethan Filip. All rights reserved.";
-
+copyrightText.innerHTML = `© ${year} Ethan Filip. All rights reserved.`;

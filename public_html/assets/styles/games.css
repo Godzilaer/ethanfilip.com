@@ -1,0 +1,21 @@
+.game-logo {
+    height: 300px;
+    background-color: var(--blue);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    margin: 0;
+    height: auto;
+}
+
+.game-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-decoration: none; 
+    color: black;
+}
+
+.game-link {
+    text-decoration: none;
+}
+
