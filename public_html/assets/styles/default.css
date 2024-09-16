@@ -51,7 +51,7 @@ header nav {
     margin-left: auto;
 }
 
-header nav a {
+.header-nav-item {
     font-size: 1.2em;
     border-right: 1.5px solid;
     padding: 0 10px;

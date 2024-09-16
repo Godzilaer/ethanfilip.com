@@ -9,10 +9,12 @@ const headerHTML =
 </div>
 
 <nav>
-    <a class="header-nav-button first-a"href="/">Home</a>
-    <a class="header-nav-button" href="/games">Games</a>
-    <a class="header-nav-button" href="/tools">Tools</a>
-    <a class="header-nav-button" href="/current-projects">Current Projects</a>
+    <ul>
+        <li><a class="header-nav-button first-a"href="/">Home</a></li>
+        <li><a class="header-nav-button" href="/games">Games</a></li>
+        <li><a class="header-nav-button" href="/tools">Tools</a></li>
+        <li><a class="header-nav-button" href="/current-projects">Current Projects</a></li>
+    </ul>
 </nav>`
 
 header.innerHTML += headerHTML;
