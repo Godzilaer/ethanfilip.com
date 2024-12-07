@@ -1,5 +1,5 @@
 :root {
-    --blue: #5daaee;
+    --blue: #7aa4f4;
     --orange: #efaa46;
     --grey: rgba(166, 189, 213, 0.205);
 }
@@ -16,10 +16,11 @@ main {
 
 header {
     display: flex;
-    width: 99vw;
+    width: 100%;
     background-color: var(--blue);
     padding: 5px 0.5vw;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 footer {
@@ -47,17 +48,21 @@ header * {
 }
 
 header nav {
-    display: inline-flex;
     margin-left: auto;
 }
 
-.header-nav-item {
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
     font-size: 1.2em;
     border-right: 1.5px solid;
     padding: 0 10px;
 }
 
-.first-a {
+.first-nav-item {
     border-left: 1.5px solid;
 }
 

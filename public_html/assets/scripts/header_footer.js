@@ -1,21 +1,24 @@
 const header = document.body.querySelector("header");
-const headerHTML = 
-`<div class="header-title-logo-holder">
-    <a href="/">
-        <img src="/assets/images/logo_circle.png" class="header-logo">
-    </a>
+const headerHTML = `
+<header>
+    <div class="header-title-logo-holder">
+        <a href="/">
+            <img src="/assets/images/logo_circle.png" class="header-logo">
+        </a>
+        
+        <h1>The Ethan Web</h1>
+    </div>
     
-    <h1>The Ethan Web</h1>
-</div>
-
-<nav>
-    <ul>
-        <li><a class="header-nav-button first-a"href="/">Home</a></li>
-        <li><a class="header-nav-button" href="/games">Games</a></li>
-        <li><a class="header-nav-button" href="/tools">Tools</a></li>
-        <li><a class="header-nav-button" href="/current-projects">Current Projects</a></li>
-    </ul>
-</nav>`
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item first-nav-item"><a href="/">Home</a></li>
+            <li class="nav-item"><a href="/games">Games</a></li>
+            <li class="nav-item"><a href="/tools">Tools</a></li>
+            <li class="nav-item"><a href="/current-projects">Current Projects</a></li>
+        </ul>
+    </nav>
+</header>
+`
 
 header.innerHTML += headerHTML;
 
