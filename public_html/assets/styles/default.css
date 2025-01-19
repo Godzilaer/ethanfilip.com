@@ -1,17 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
-    --blue: #256fd6;
-    --orange: #efaa46;
-    --grey: rgba(166, 189, 213, 0.205);
+    --navy: #343444;
+    --blue: #1A9EC7;
+    --silver: #c2c2c2;
+    --red: #A5121A;
+    --green: #C4D5A7;
 }
 
 body {
     font-family: 'DM Sans', sans-serif;
     margin: 0;
+    padding: 0;
     background-color: aliceblue;
+    overflow-x: hidden;
+}
+
+body *:not(.no-fade-in):not(.no-fade-in *) {
+    animation: fadeInAnimation ease 1.5s;
+    animation-play-state: paused;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    will-change: opacity, transform;
+}
+
+.fade-in-running {
+    animation-play-state: running !important;
+}
+
+.fade-in-end {
+    animation: none !important;
 }
 
 header {
+    background-color: var(--silver);
+}
+
+footer {
+    background-color: var(--silver);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/*
+Misc
+*/
+
+.title-main {
+    background-color: var(--green);
+    padding: 0.5em;
+    border-radius: 0.3em;
+    margin: 1em 0;
+}
+
+.title-secondary {
     background-color: var(--blue);
+    padding: 0.3em;
+    border-radius: 0.3em;
 }
