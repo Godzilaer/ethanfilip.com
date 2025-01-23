@@ -14,6 +14,19 @@ body {
     padding: 0;
     background-color: aliceblue;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 body *:not(.no-fade-in):not(.no-fade-in *) {
@@ -59,4 +72,9 @@ Misc
     background-color: var(--blue);
     padding: 0.3em;
     border-radius: 0.3em;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
 }

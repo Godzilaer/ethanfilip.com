@@ -36,6 +36,9 @@ fetch('/assets/html-modules/footer.html')
     
     //Insert before the first script tag in the body
     document.querySelector("body script").insertAdjacentHTML("beforebegin", doc.body.innerHTML);
+
+    const footerLoadedEvent = new Event('footerLoaded');
+    document.dispatchEvent(footerLoadedEvent);
 })
 .catch(error => {
     console.error('Footer fetch error:', error);

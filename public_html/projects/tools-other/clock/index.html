@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    
+    <link rel='icon' type='image/x-icon' href='/projects/tools-other/clock/images/favicon.png'/>
+
+    <title>Clock - Ethanos</title>
+    
+    <link rel='stylesheet' type='text/css' href='/projects/tools-other/clock/styles/style.css' media='screen'/>	
+  </head>
+
+  <body>
+    <video class='backgroundVid' autoplay muted loop playsinline>
+    <source src='/projects/tools-other/clock/images/wavesbackground.webm' type='video/webm'/>
+    </video>
+    
+    <div class='clock'>    
+      <svg class="holder" width="7px" height="300px" overflow="visible">
+        <rect id="hour" class="hands" x="-3px" y="-5px" rx="15px" width="13px" height="100px" fill="black"></rect>
+    	<rect id="min" class="hands" x="-1px" y="-8px" rx="25px" width="9px" height="160px" fill="black"></rect>
+    	<circle cx="3.5px" cy="0" r="10px" fill="grey"></circle>
+	<circle cx="3.5px" cy="0" r="5px" fill="red"></circle>
+	<rect id="sec" class="hands" x="1px" y="-40px" rx="20px" width="5px" height="275px" fill="red"></rect>
+      </svg>
+
+      <img class='clockBackground' src='/projects/tools-other/clock/images/clock_background.png'/>
+    </div>
+
+    <script type='text/javascript' src='/projects/tools-other/clock/scripts/clock.js?v=0'></script>
+    <!--<script type='text/javascript' src='scripts/schedule.js?v=0.1'></script>-->
+  </body>
+</html>

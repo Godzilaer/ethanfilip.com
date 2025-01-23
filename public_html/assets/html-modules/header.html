@@ -1,4 +1,4 @@
-<header class='navbar navbar-expand-sm py-2 mb-4'>
+<header class='navbar navbar-expand-sm py-2 mb-4 no-fade-in'>
     <div class='container-fluid'>
         <a href='/' class="navbar-brand">
             <img src='/assets/images/logo.png' height='40px'>
@@ -8,18 +8,36 @@
             <span class='navbar-toggler-icon'></span>
         </button>
     
-        <nav class='collapse navbar-collapse' id='navbar-collapse-section'>
+        <nav class='collapse navbar-collapse' id='navbar-collapse-section' >
             <ul class='navbar-nav ms-auto'>
                 <li class='nav-item px-3'>
-                    <a class='nav-link' href='/projects'>Projects</a>
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="/projects">Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/projects#websites">Websites</a></li>
+                            <li><a class="dropdown-item" href="/projects#games">Games</a></li>
+                            <li><a class="dropdown-item" href="/projects#tools-other">Tools/Other</a></li>
+                        </ul>
+                    </div>           
                 </li>
 
                 <li class='nav-item px-3'>
-                    <a class='nav-link' href='/extracurriculars'>Extracurriculars</a>
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="/extracurriculars">Extracurriculars</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/extracurriculars#clubs">Clubs</a></li>
+                            <li><a class="dropdown-item" href="/extracurriculars#hobbies">Hobbies</a></li>
+                        </ul>
+                    </div>           
                 </li>
-    
+
                 <li class='nav-item px-3'>
-                    <a class='nav-link' href='/awards-and-experiences'>Awards and Experiences</a>
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="/awards-and-experiences">Awards and Experiences</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/awards-and-experiences#2024">2024</a></li>
+                        </ul>
+                    </div>           
                 </li>
             </ul>
         </nav>
