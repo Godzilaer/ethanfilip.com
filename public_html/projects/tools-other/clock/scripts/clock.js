@@ -12,7 +12,7 @@ let syncClockInterval;
 function rotate()
 {
 	const d = new Date();
-	//const d = new Date('Wed Feb 15 2023 06:00:45 GMT-0500 (Eastern Standard Time)'); //For testing purposes
+	//d = new Date('Wed Feb 15 2023 03:00:15 GMT-0500 (Eastern Standard Time)'); //For testing purposes
 	let seconds = d.getSeconds();
 	let minutes = d.getMinutes();
 	let hours = d.getHours();
@@ -38,9 +38,9 @@ function rotate()
 	let minsCalc = minutes * 6 + secsCalc / 60;
 	let hoursCalc = hours * 30 + minsCalc / 12;
 	
-	let secHandRot = 'rotate(' + (secsCalc - 180 + secOldRot) + 'deg)';
-	let minHandRot = 'rotate(' + (minsCalc - 180 + minOldRot) + 'deg)';
-	let hourHandRot = 'rotate(' + (hoursCalc - 180 + hourOldRot) + 'deg)';
+	let secHandRot = 'rotate(' + (secsCalc + secOldRot) + 'deg)';
+	let minHandRot = 'rotate(' + (minsCalc + minOldRot) + 'deg)';
+	let hourHandRot = 'rotate(' + (hoursCalc + hourOldRot) + 'deg)';
 	
 	secondHand.style.transform = secHandRot;
 	minuteHand.style.transform = minHandRot;
@@ -59,7 +59,6 @@ function syncClock()
       clearInterval(syncClockInterval);
 		
       rotate();
-	
     }
 }
 

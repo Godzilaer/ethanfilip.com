@@ -1,31 +1,27 @@
-body{
-	text-align: center;
+body {
+	margin: 0;
+	overflow: hidden;
 }
 
-.clock{
-	margin-left: 355px;
-}
-
-.holder{
-	margin-right: -358px;
-}
-
-.hands{
-	transform-origin: 50% 0%;
+.clock-hand {
+	transform-origin: 50% 50%;
 	transition: 100ms cubic-bezier(0.54,-0.05, 0.48, 1.55) all;
-	
 }
 
-.clockBackground{
-	position: relative;
-	width: 700px;
-	height: auto;
-	margin-top: 15vh;
-	margin-bottom: -50px;
-	z-index: -1;
+#clock {
+	position: absolute;
 }
 
-.backgroundVid{
+#clock-holder {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+#background-video{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -34,3 +30,30 @@ body{
 	z-index: -2;
 }
 
+#clock-background{
+	width: 800px;
+	width: 800px;
+	position: absolute;
+}
+
+#menu-button {
+	position: absolute
+}
+
+@media screen and (max-width: 720px) {
+	#clock-holder {
+		transform: scale(0.8);
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#clock-holder {
+		transform: scale(0.6);
+	}
+}
+
+@media screen and (max-width: 540px) {
+	#clock-holder {
+		transform: scale(0.4);
+	}
+}

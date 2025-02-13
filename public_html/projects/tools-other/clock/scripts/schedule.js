@@ -1,140 +1,82 @@
-const dateText = document.getElementById('date');
-const dayText = document.getElementById('day');
-const blocksText = document.getElementById('blocks');
-const blockText = document.getElementById('block');
-const blockTimeLeftText = document.getElementById('blockTimeLeft');
+const firstLunch = [1226, 1248]
+const secondLunch = [1319, 1341]
+//1248
 
-const day = Number(prompt("What school day is it today?"));
+const times = [
+    //1
+    [835, 928],
 
-var blockIndex;
+    //2
+    [931, 1024],
 
-const blocks = [
-    'ABCEFG',
-    'DABFEH',
-    'CDAGEH',
-    'BCDFGH',
-    'ABCEFG',
-    'DABFEH',
-    'CDAGEH',
-    'BCDFGH'
+    //Break
+    [1027, 1034],
+
+    //3
+    [1037, 1130],
+
+    //4
+    [1133, 1226],
+
+    //5 - Both lunches within this period
+    [1229, 1341],
+
+    //6
+    [1344, 1437],
+
+    //FLEX
+    [1440, 1510],
+
+    //Buses Leave
+    [1515, 1520],
+
+    //Late Bus Leaves
+    [1555, 1600]
 ]
 
-const blocksWithLunch = [
-    'ABCLEFG',
-    'DABLFEH',
-    'CDALGEH',
-    'BCDLFGH',
-    'ABCLEFG',
-    'DABLFEH',
-    'CDALGEH',
-    'BCDLFGH'
-]
+function Update() {
+    let d = new Date();
 
-const blockTimes = [
-    835,
-    932,
-    935,
-    1032,
-    1035,
-    1134,
-    1137,
-    1208,
-    1211,
-    1309,
-    1312,
-    1409,
-    1412,
-    1510
-]
+    let time = d.getHours() + '' + d.getMinutes().toString().padStart(2, '0');
 
-function update()
-{
-    const d = new Date();
+    closestI = -1;
+    isWithinTime = false;
 
-    dateText.innerHTML = (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getYear().toString().slice(1);
-    dayText.innerHTML = "Day " + day;
-    blocksText.innerHTML = blocks[day - 1];
-    blockText.innerHTML = GetCurrentBlock(d);
-    blockTimeLeftText.innerHTML = GetBlockTimeLeft();
-}
-
-function GetCurrentBlock(d)
-{
-    const t = d.getMinutes() < 10 ? Number('' + d.getHours() + 0 + d.getMinutes()) : Number('' + d.getHours() + d.getMinutes());
-    const blocksToday = blocksWithLunch[day - 1];
-
-    var blockId = "After School";
-
-    for(let i = 0; i < blockTimes.length; i++)
-    {
-        if(t < blockTimes[i])
-        {
-            if(i == 0)
-            {
-                //First bell
-                if(t >= 830)
-                {
-                    blockId = "Transition: To " + blocksToday[0] + " Block";
-                    break;
-                }
-                
-                //Before first bell
-                blockId = "Before School";
-                break;
-            }
+    for(let i = 0; i < 10; i++) {
+        let timeFrame = times[i];
+  
+        if(time >= timeFrame[0] && time < timeFrame[1]) {
             
-            if(blockTimes[i] - blockTimes[i - 1] == 3)
-            {
-                blockIndex = blocksToday.charAt(Math.floor(i / 2));
-                var block1 = blocksToday.charAt(Math.floor((i - 1) / 2)) + " Block";
-                var block2 =  blocksToday.charAt(Math.floor(i / 2)) + " Block";
+            closestI = i;
+            isWithinTime = true;
 
-                if(block1 == "L Block")
-                {
-                    block1 = "Lunch";
-                }
+            console.log("Period " + (i));
+            console.log("Time Remaining: " + TimeUntil(timeFrame[1]));
+            break;
+        }
 
-                if(block2 == "L Block")
-                {
-                    block2 = "Lunch";
-                }
-                
-                blockId = "Transition: " + block1 + " to " + block2;
-                break;
-            }
-
-            if(i == 1)
-            {
-                blockId = i - 1;
-                blockIndex = blockId;
-                break;
-            }
-
-            blockId = Math.floor(i / 2);
-            blockIndex = blockId;
+        if(time >= timeFrame[1] && time < times[i+1][0]) {
+            console.log("Transition to Period " + (i+2))
             break;
         }
     }
-
-    if(blockId > -1)
-    {
-        var block = blocksToday.charAt(blockId);
-        
-        if(block == "L")
-        {
-            return "Lunch";
-        }
-        
-        return block + " Block";
-    }
-
-    return blockId;
 }
 
-function GetBlockTimeLeft()
-{
-    return blockTimes[blockIndex] - blockTimes[blockIndex - 1];
+function TimeUntil(targetTime) {
+    const targetTimeStr = targetTime.toString().padStart(4, '0');
+    const targetTimeHrs = parseInt(targetTimeStr.slice(0, -2), 10);
+    const targetTimeMins = parseInt(targetTimeStr.slice(-2), 10);
+    let targetTimeDate = new Date();
+    targetTimeDate.setHours(targetTimeHrs, targetTimeMins, 0, 0);
+
+    let now  = new Date();
+
+    diffMilliseconds = targetTimeDate - now;
+
+    diffMinutes = Math.floor(diffMilliseconds / 60000);
+    diffSeconds = Math.floor((diffMilliseconds / 1000) - diffMinutes * 60).toString().padStart(2, '0');
+       
+    return diffMinutes + ":" + diffSeconds;
 }
 
-update();
-setInterval(update, 1000);
+//updateInterval = setInterval(Update, 1000)
