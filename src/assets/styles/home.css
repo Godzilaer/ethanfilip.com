@@ -1,0 +1,10 @@
+.welcome-container {
+    background-color: var(--navy);;
+    border-radius: 1em;
+    color: white;
+}
+
+#me {
+    width: 50%;
+    max-width: 500px;
+}
