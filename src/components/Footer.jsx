@@ -1,11 +1,9 @@
-import Logo from '/src/assets/images/logo.png'
-
 export default function Footer() {
     return (
         <footer className="mt-4 py-1 no-fade-in">
             <div className='row p-4'>
                 <div className="col-sm-4 d-flex justify-content-center ">
-                    <a href="/"><img width="100px" src={Logo} /></a>
+                    <a href="/"><img width="100px" src='/images/logo.png' /></a>
                 </div>
             
                 <div className="col-sm-4">

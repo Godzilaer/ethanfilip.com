@@ -20,7 +20,7 @@ body {
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
     100% {
@@ -29,15 +29,14 @@ body {
     }
 }
 
-/*
-body *:not(.no-fade-in):not(.no-fade-in *) {
+main * {
     animation: fadeInAnimation ease 1.5s;
-    animation-play-state: paused;
+    animation-play-state: running;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     will-change: opacity, transform;
 }
-
+/*
 .fade-in-running {
     animation-play-state: running !important;
 }

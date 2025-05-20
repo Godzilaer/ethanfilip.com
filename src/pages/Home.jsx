@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
 import '/src/assets/styles/Home.css';
-import EthanFilipImg from '/src/assets/images/EthanFilip.jpg';
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "The Ethan Web - Home";
+  }, []);
+
   return (
     <main className="container-fluid">
         <div className="welcome-container col-12 text-center p-4">
@@ -9,7 +13,7 @@ export default function Home() {
         </div>
 
         <section className="w-100 mt-3">
-            <img src={EthanFilipImg} id="me" className="rounded float-start me-3"/>
+            <img src='/images/EthanFilip.jpg' id="me" className="rounded float-start me-3"/>
             <p className="lead text-center fs-1" id="welcome-p">My name is Ethan Filip.</p>
 
             <p className="main-p fs-3">I am currently 15 years old as a 9th grader at Dover-Sherborn High School in Massachusetts. I am most interested in technology, science, and engineering. I post some of my completed projects on this website along with my extracurriculars, hobbies, experiences, and awards.</p>

@@ -1,11 +1,9 @@
-import Logo from '/src/assets/images/logo.png'
-
 export default function Header() {
     return (
         <header className='navbar navbar-expand-sm py-2 mb-4 no-fade-in'>
             <div className='container-fluid'>
                 <a href='/' className="navbar-brand">
-                    <img src={Logo} height='40px' />
+                    <img src='/images/logo.png' height='40px' />
                 </a>
             
                 <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbar-collapse-section' aria-controls='navbar-collapse-section' aria-expanded='false' aria-label='Toggle navigation'>
