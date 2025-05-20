@@ -1,5 +1,2 @@
 # ethanweb.xyz
-This is my portfolio website.
-
-# Info
-Currently rewriting it using Vite and React.
+This is my portfolio website. It includes a bit about me and my projects, including games.
