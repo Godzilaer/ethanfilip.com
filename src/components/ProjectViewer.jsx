@@ -23,7 +23,7 @@ export default function ProjectViewer(props) {
         <main className="container-fluid">
             <h1 className="title-main text-center">{titleCaseName}</h1>
             <button id="fullscreen-btn" onClick={OnFullscreenButtonClicked}><img src="/images/fullscreen_icon.png"/></button>
-            <iframe id="project-viewer" src={`/projects/${params.name}/index.html`}></iframe>
+            <iframe id="project-viewer" src={`/project-files/${params.name}/index.html`}></iframe>
         </main>
     )
 }
