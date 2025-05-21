@@ -1,4 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
+import { useEffect } from "react";
 
 import '/src/assets/styles/default.css';
 import Header from './components/Header';
@@ -12,6 +13,8 @@ import AwardsAndExperiences from './pages/AwardsAndExperiences';
 import NotFound from './pages/NotFound';
 
 export default function App() {
+  useEffect(fadeInEffect, []);
+
   return (
     <>
       <Header />
@@ -26,4 +29,32 @@ export default function App() {
       <Footer />
     </>
   )
+
+  function fadeInEffect() {
+    const elems = document.querySelectorAll('main *');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+
+                element.classList.add('fade-in-running');
+   
+                element.addEventListener("animationend", () => {
+                    element.classList.remove('fade-in-running');
+
+                    element.classList.add('fade-in-end');
+                }, { once: true });
+
+                observer.unobserve(element);
+            }
+        });
+    }, 
+    //10% of element seen
+    { threshold: 0.1 });
+
+    elems.forEach((element) => {
+        observer.observe(element);
+    });
+  }
 }

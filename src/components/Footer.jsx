@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="mt-4 py-1 no-fade-in">
+        <footer className="mt-4 py-1">
             <div className='row p-4'>
                 <div className="col-sm-4 d-flex justify-content-center ">
                     <a href="/"><img width="100px" src='/images/logo.png' /></a>

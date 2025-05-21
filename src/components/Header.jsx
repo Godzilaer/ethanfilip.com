@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-        <header className='navbar navbar-expand-sm py-2 mb-4 no-fade-in'>
+        <header className='navbar navbar-expand-sm py-2 mb-4'>
             <div className='container-fluid'>
                 <a href='/' className="navbar-brand">
                     <img src='/images/logo.png' height='40px' />

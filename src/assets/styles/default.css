@@ -31,20 +31,20 @@ body {
 
 main * {
     animation: fadeInAnimation ease 1.5s;
-    animation-play-state: running;
+    animation-play-state: paused;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     will-change: opacity, transform;
 }
-/*
+
 .fade-in-running {
-    animation-play-state: running !important;
+    animation-play-state: running;
 }
 
 .fade-in-end {
-    animation: none !important;
+    animation: none;
 }
-*/
+
 header {
     background-color: var(--silver);
 }

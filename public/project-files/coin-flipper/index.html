@@ -41,7 +41,6 @@
 
       //So theres a weird glitch where the graphic component in the WebGL build is removed on screen size change. So, set let the size auto-adjust to 100% at the start but then immediately make sure it is fixed to prevent this error.
       window.addEventListener("DOMContentLoaded", function() {
-        
         canvas.style.width = canvas.clientWidth + "px";
         canvas.style.height = canvas.clientHeight + "px";
       });

@@ -30,7 +30,7 @@ export default function ProjectViewer(props) {
 
 function ProjectExists(params) {
     const project = projectsData.find(project => project.name.toLowerCase() === params.name.replace(/-/g, " "));
-    console.log(params.name.replace(/-/g, " "));
+
     return project !== undefined;
 }
 
