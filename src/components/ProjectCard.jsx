@@ -9,14 +9,14 @@ export default function ProjectCard(props) {
 
     return (
         <div className="col-auto card">
-                <img className="card-img-top p-3" src={project.img} />
-                <div className="card-body text-center">
-                    <h2 className="card-title text-center">{project.name}</h2>
-                    <p className="card-text">{project.type}</p>
-                    
-                    <p>{project.desc}</p>
-                    <a href={project.link} target="_blank" rel={project.type == 'Website' ? 'noopener noreferrer' : undefined} className="btn btn-primary">{typeToButtonLabel[project.type]}</a>
-                </div>
+            <img className="card-img-top p-3" src={project.img} />
+            <div className="card-body text-center">
+                <h2 className="card-title text-center">{project.name}</h2>
+                <p className="card-text">{project.type}</p>
+                
+                <p>{project.desc}</p>
+                <a href={project.link} target="_blank" rel={project.type == 'Website' ? 'noopener noreferrer' : undefined} className="btn btn-primary">{typeToButtonLabel[project.type]}</a>
+            </div>
         </div>
     )
 }
