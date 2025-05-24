@@ -9,7 +9,7 @@ export default function ProjectCard(props) {
 
     return (
         <div className="col-auto card">
-            <img className="card-img-top p-3" src={project.img} />
+            <img className="p-3" src={project.img} />
             <div className="card-body text-center">
                 <h2 className="card-title text-center">{project.name}</h2>
                 <p className="card-text">{project.type}</p>

@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Flappy Pengoon</title>
   </head>
-  <body style="text-align: center; margin: 0; overflow: hidden;">
-    <canvas id="unity-canvas" tabindex="-1" style="width: 100%; height: 100%; margin: 0;"></canvas>
+  <body style="text-align: center; padding: 0; border: 0; margin: 0; overflow: hidden;">
+    <canvas id="unity-canvas" tabindex="-1" style="width: 100%; height: 100%;"></canvas>
     <script src="Build/WebGL.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/WebGL.data.unityweb",
-        frameworkUrl: "Build/WebGL.framework.js.unityweb",
-        codeUrl: "Build/WebGL.wasm.unityweb",
+        dataUrl: "Build/WebGL.data.br",
+        frameworkUrl: "Build/WebGL.framework.js.br",
+        codeUrl: "Build/WebGL.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "AirTrafficTroubles",
-        productName: "Air Traffic Troubles",
-        productVersion: "1.1.0",
+        companyName: "DefaultCompany",
+        productName: "Flappy Pengoon",
+        productVersion: "1.0",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });

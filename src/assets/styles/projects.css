@@ -3,6 +3,7 @@
     max-width: 400px;
 }
 
-.card-img-top {
+.card > img {
     aspect-ratio: 1 / 1;
+    border-radius: 25%;
 }
