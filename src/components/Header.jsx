@@ -1,4 +1,7 @@
-export default function Header() {
+import awardsAndExperiences from '/src/data/awards-and-experiences';
+import AwardExperienceDropdownItem from './AwardExperienceDropdownItem';
+
+export default function Header() {    
     return (
         <header className='navbar navbar-expand-sm py-2 mb-4'>
             <div className='container-fluid'>
@@ -36,8 +39,8 @@ export default function Header() {
                         <li className='nav-item px-3'>
                             <div className="dropdown">
                                 <a className="btn dropdown-toggle" href="/awards-and-experiences">Awards and Experiences</a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/awards-and-experiences#2024">2024</a></li>
+                                <ul className="dropdown-menu" id="awards-experiences-dropdown">
+                                    {awardsAndExperiences.map(section => <AwardExperienceDropdownItem key={section[0]} sectionName={section[0]}/>)}
                                 </ul>
                             </div>           
                         </li>
