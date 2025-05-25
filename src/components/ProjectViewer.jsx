@@ -5,19 +5,18 @@ import projectsData from '/src/data/projects';
 import '/src/assets/styles/project-viewer.css';
 import NotFound from '/src/pages/NotFound';
 
-export default function ProjectViewer(props) {
+export default function ProjectViewer() {
     const params = useParams();
-
-    if(!ProjectExists(params)) {
-        return (<NotFound />)
-    }
-
     let split = params.name.replaceAll("-", " ").split(" ");
     let titleCaseName = split.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 
     useEffect(() => {
         document.title = `The Ethan Web - ${titleCaseName}`;
-    }, []);
+    }, [titleCaseName]);
+
+    if(!ProjectExists(params)) {
+        return (<NotFound />)
+    }    
 
     return (
         <main className="container-fluid">
