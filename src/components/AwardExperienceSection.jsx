@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import AwardExperience from "./AwardExperience";
 
 export default function AwardExperienceSection(props) {
@@ -11,4 +13,9 @@ export default function AwardExperienceSection(props) {
             </ul>
         </section>
     )
+}
+
+AwardExperienceSection.propTypes = {
+    sectionName: PropTypes.string.isRequired,
+    awardsExperiences: PropTypes.array.isRequired,
 }

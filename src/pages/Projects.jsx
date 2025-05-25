@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-
+import { React, useEffect } from 'react';
 import ProjectCard from '/src/components/ProjectCard';
 import projectsData from '/src/data/projects';
 

@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import ClubGrade from './ClubGrade';
 
 export default function Club(props) {
@@ -13,4 +15,8 @@ export default function Club(props) {
             </ul>
         </li>
     )
+}
+
+Club.propTypes = {
+    club: PropTypes.object.isRequired,
 }

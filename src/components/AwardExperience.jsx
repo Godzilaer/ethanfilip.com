@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from "prop-types";
+
 export default function AwardExperience(props) {
     const awardExperience = props.awardExperience;
 
@@ -19,4 +22,8 @@ export default function AwardExperience(props) {
             </ul>
         </li>
     )
+}
+
+AwardExperience.propTypes = {
+    awardExperience: PropTypes.object.isRequired,
 }

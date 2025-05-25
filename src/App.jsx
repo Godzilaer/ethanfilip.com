@@ -1,5 +1,5 @@
 import { Route, Routes} from 'react-router-dom';
-import { useEffect } from "react";
+import { React, useEffect } from "react";
 
 import '/src/assets/styles/default.css';
 import Header from './components/Header';

@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from "prop-types";
+
 export default function ClubGrade(props) {
     const grade = props.grade;
     return (
@@ -6,4 +9,8 @@ export default function ClubGrade(props) {
             <p>{grade.desc}</p>
         </li>
     )
+}
+
+ClubGrade.propTypes = {
+    grade: PropTypes.object.isRequired,
 }

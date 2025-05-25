@@ -1,3 +1,4 @@
+import React from 'react';
 import awardsAndExperiences from '/src/data/awards-and-experiences';
 import AwardExperienceDropdownItem from './AwardExperienceDropdownItem';
 

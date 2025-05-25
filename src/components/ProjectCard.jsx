@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from "prop-types";
+
 export default function ProjectCard(props) {
     let project = props.project;
 
@@ -15,8 +18,12 @@ export default function ProjectCard(props) {
                 <p className="card-text">{project.type}</p>
                 
                 <p>{project.desc}</p>
-                <a href={project.link} target="_blank" rel={project.type == 'Website' ? 'noopener noreferrer' : undefined} className="btn btn-primary">{typeToButtonLabel[project.type]}</a>
+                <a href={project.link} target="_blank" rel='noopener noreferrer' className="btn btn-primary">{typeToButtonLabel[project.type]}</a>
             </div>
         </div>
     )
+}
+
+ProjectCard.propTypes = {
+    project: PropTypes.object.isRequired,
 }
