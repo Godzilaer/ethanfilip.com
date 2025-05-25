@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import awardsAndExperiences from '/src/data/awards-and-experiences';
-import AwardExperienceDropdownItem from './AwardExperienceDropdownItem';
 
 export default function Header() {    
     return (
@@ -50,4 +50,14 @@ export default function Header() {
             </div>
         </header>
     )
+}
+
+function AwardExperienceDropdownItem(props) {
+    return (
+        <li><a className="dropdown-item" href={`/awards-and-experiences#${props.sectionName}`}>{props.sectionName}</a></li>
+    )
+}
+
+AwardExperienceDropdownItem.propTypes = {
+    sectionName: PropTypes.string.isRequired,
 }
