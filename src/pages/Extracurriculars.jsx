@@ -1,4 +1,3 @@
-import React from 'react'
 import extracurriculars from '/src/data/extracurriculars'
 import Club from '/src/components/Club'
 import Hobby from '/src/components/Hobby'

@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import awardsAndExperiences from '/src/data/awards-and-experiences';
 

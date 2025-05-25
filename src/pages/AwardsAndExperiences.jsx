@@ -1,4 +1,3 @@
-import React from 'react';
 import AwardExperienceSection from '/src/components/AwardExperienceSection'
 import awardsAndExperiences from '/src/data/awards-and-experiences'
 
