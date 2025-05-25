@@ -1,7 +1,7 @@
 import { Route, Routes} from 'react-router-dom';
 import { React, useEffect } from "react";
 
-import '/src/assets/styles/default.css';
+import './assets/styles/default.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
