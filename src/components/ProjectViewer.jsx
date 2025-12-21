@@ -1,4 +1,4 @@
-import useEffect from 'react';
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import projectsData from '/src/data/projects';
 
@@ -14,14 +14,14 @@ export default function ProjectViewer() {
         document.title = `The Ethan Web - ${titleCaseName}`;
     }, [titleCaseName]);
 
-    if(!ProjectExists(params)) {
+    if (!ProjectExists(params)) {
         return (<NotFound />)
-    }    
+    }
 
     return (
         <main className="container-fluid">
             <h1 className="title-main text-center">{titleCaseName}</h1>
-            <button id="fullscreen-btn" onClick={OnFullscreenButtonClicked}><img src="/images/fullscreen_icon.png"/></button>
+            <button id="fullscreen-btn" onClick={OnFullscreenButtonClicked}><img src="/images/fullscreen_icon.png" /></button>
             <iframe id="project-viewer" src={`/project-files/${params.name}/index.html`}></iframe>
         </main>
     )

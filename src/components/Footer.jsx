@@ -5,7 +5,7 @@ export default function Footer() {
                 <div className="col-sm-4 d-flex justify-content-center ">
                     <a href="/"><img width="100px" src='/images/logo.png' /></a>
                 </div>
-            
+
                 <div className="col-sm-4">
                     <h5>Contact</h5>
                     <ul className="list-unstyled">
