@@ -42,6 +42,10 @@ body {
 	position: absolute
 }
 
+#timer-visual {
+	transition: linear 1s;
+}
+
 @media screen and (max-width: 720px) {
 	#clock-holder {
 		transform: scale(0.8);

@@ -50,6 +50,10 @@ function Update() {
             closestI = i;
             isWithinTime = true;
 
+            if(i < 2) {
+                i+=1
+            }
+
             console.log("Period " + (i));
             console.log("Time Remaining: " + TimeUntil(timeFrame[1]));
             break;
@@ -75,8 +79,10 @@ function TimeUntil(targetTime) {
 
     diffMinutes = Math.floor(diffMilliseconds / 60000);
     diffSeconds = Math.floor((diffMilliseconds / 1000) - diffMinutes * 60).toString().padStart(2, '0');
+
+    VisualTimerArc(diffMinutes * 6);
        
     return diffMinutes + ":" + diffSeconds;
 }
 
-//updateInterval = setInterval(Update, 1000)
+updateInterval = setInterval(Update, 1000)

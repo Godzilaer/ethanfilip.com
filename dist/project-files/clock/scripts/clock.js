@@ -9,6 +9,10 @@ let hourOldRot = 0;
 let oldSecond;
 let syncClockInterval;
 
+var secsCalc;
+var minsCalc;
+var hoursCalc;
+
 function rotate()
 {
 	const d = new Date();
@@ -34,9 +38,9 @@ function rotate()
 		hourOldRot += 360;
 	}
 	
-	let secsCalc = seconds * 6;
-	let minsCalc = minutes * 6 + secsCalc / 60;
-	let hoursCalc = hours * 30 + minsCalc / 12;
+	secsCalc = seconds * 6;
+	minsCalc = minutes * 6 + secsCalc / 60;
+	hoursCalc = hours * 30 + minsCalc / 12;
 	
 	let secHandRot = 'rotate(' + (secsCalc + secOldRot) + 'deg)';
 	let minHandRot = 'rotate(' + (minsCalc + minOldRot) + 'deg)';
@@ -62,3 +66,30 @@ function syncClock()
     }
 }
 
+function VisualTimerArc(endAngle) {
+	let startAngle = minsCalc - 90;
+	endAngle -= 90;
+	
+	if(endAngle < startAngle) {
+		endAngle += 360;
+	}
+
+	const timerVisual = document.getElementById("timer-visual");
+
+    const radius = timerVisual.getAttribute("r");  // Circle radius
+    const circumference = 2 * Math.PI * radius;  // Full circle length
+
+    // Calculate arc length (proportion of the circumference)
+    const arcLength = ((endAngle - startAngle) / 360) * circumference;
+
+    // Stroke-dasharray: arc length (visible) + remaining (invisible)
+    const gapLength = circumference - arcLength;
+    
+    // Stroke-dashoffset: moves the starting position of the arc
+    const dashOffset = (circumference * (1 - startAngle / 360));
+
+    // Apply to the arc element
+    
+    timerVisual.setAttribute("stroke-dasharray", `${arcLength} ${gapLength}`);
+    timerVisual.setAttribute("stroke-dashoffset", dashOffset);
+}
