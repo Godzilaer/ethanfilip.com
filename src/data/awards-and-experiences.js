@@ -18,6 +18,9 @@ const awardExperienceItem = (name, desc) => ({
 });
 
 var data = {
+    2026 : [
+        awardExperience("FTC Competition", "2026-1-3", "January 3"),
+    ],
     2025 : [
         awardExperience("Taize Youth Pilgrimage", "2025-6-24", "June 24 - July 7", "Taize is a monastic community in Burgundy, France. I will be taking part in the youth pilgrimage along with thousands of other teenagers from across the world..", null, []),
     ],
