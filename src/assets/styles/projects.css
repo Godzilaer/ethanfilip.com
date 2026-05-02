@@ -1,6 +1,7 @@
 .card {
     margin: 1em;
     max-width: 400px;
+    background-color: rgb(23, 23, 23)
 }
 
 .card > img {

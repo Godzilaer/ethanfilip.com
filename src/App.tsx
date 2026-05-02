@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import ProjectViewer from './components/ProjectViewer';
+import ProjectViewer from './pages/ProjectViewer';
 import Extracurriculars from './pages/Extracurriculars';
 import AwardsAndExperiences from './pages/AwardsAndExperiences';
 import NotFound from './pages/NotFound';

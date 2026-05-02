@@ -6,15 +6,18 @@
     --silver: #c2c2c2;
     --red: #A5121A;
     --green: #C4D5A7;
+    --header-footer-color: #393d3e;
 }
 
 body {
     font-family: 'DM Sans', sans-serif;
+    font-weight: 200;
     margin: 0;
     padding: 0;
-    background-color: aliceblue;
+    background-color: #252727;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    color: white;
 }
 
 @keyframes fadeInAnimation {
@@ -37,6 +40,15 @@ main * {
     will-change: opacity, transform;
 }
 
+.carousel-item {
+    animation: none;
+    height: 50vh;
+}
+
+.carousel-item > img {
+    height: 100%;
+}
+
 .fade-in-running {
     animation-play-state: running;
 }
@@ -46,15 +58,28 @@ main * {
 }
 
 header {
-    background-color: var(--silver);
+    background-color: var(--header-footer-color);
+}
+
+header .dropdown-item:hover {
+    background-color: rgb(37, 36, 36);
+}
+
+.navbar-toggler-icon {
+    border: white;
 }
 
 footer {
-    background-color: var(--silver);
+    background-color: var(--header-footer-color);
 }
 
 footer a {
     text-decoration: none;
+    color: rgb(74, 168, 231);
+}
+
+footer a:hover {
+    color: rgb(52, 107, 224)
 }
 
 /*
@@ -62,7 +87,6 @@ Misc
 */
 
 .title-main {
-    color: white;
     background-color: var(--navy);
     padding: 0.5em;
     border-radius: 0.3em;

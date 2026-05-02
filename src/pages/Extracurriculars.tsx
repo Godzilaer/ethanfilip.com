@@ -1,10 +1,12 @@
-import extracurriculars from '/src/data/extracurriculars'
-import Club from '/src/components/Club'
-import Hobby from '/src/components/Hobby'
+import extracurriculars from '../data/extracurriculars'
+import Club from '../components/Club'
+import Hobby from '../components/Hobby'
 
 export default function Extracurriculars() {
     return (
         <main className="container-fluid">
+            <title>Ethan Filip&#39;s Extracurriculars</title>
+
             <h1 className="title-main text-center">Extracurriculars</h1>
 
             <section id="clubs">
